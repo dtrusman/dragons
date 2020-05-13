@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 
 export const instance = axios.create({
-  baseURL: 'http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1',
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 type APIReturn<T> = [Error | null, T | null];
@@ -56,10 +56,7 @@ export async function put<T = any>(
   }
 }
 
-export async function del(
-  url: string,
-  config?: AxiosRequestConfig,
-): Promise<APIReturn<number>> {
+export async function del(url: string, config?: AxiosRequestConfig): Promise<APIReturn<number>> {
   try {
     const request: AxiosResponse = await instance.delete(url, config);
     if (request.data instanceof Error) {
