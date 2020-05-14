@@ -14,6 +14,10 @@ export const Form = styled.form`
   justify-content: space-evenly;
   width: 50%;
   height: 50%;
+
+  @media (max-width: 600px) {
+    width: 85%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -29,4 +33,12 @@ export const FormGroup = styled.div`
   align-items: center;
   width: 100%;
   height: 65%;
+`;
+
+export const ActionContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 `;

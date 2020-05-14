@@ -6,17 +6,18 @@ interface Props {
   name: string;
   label: string;
   value?: string;
+  type?: string;
 }
 
 export const TextField = React.forwardRef(
-  ({ name, label, value }: Props, ref: React.Ref<HTMLInputElement>) => {
+  ({ name, label, value, type = 'text' }: Props, ref: React.Ref<HTMLInputElement>) => {
     return (
       <div className="input-container">
         <input
           id={name}
           name={name}
           className="input"
-          type="text"
+          type={type}
           pattern=".+"
           required
           ref={ref}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Textarea, Button, TextField, BackButton, Loader } from 'components';
+import { Textarea, Button, TextField, Loader } from 'components';
 
-import { Container, Form, Title, Span, FormGroup } from './styles';
+import { Container, Form, Title, Span, FormGroup, ActionContainer } from './styles';
 
 import useModel from './useModel';
 
@@ -38,10 +38,11 @@ export const Create: React.FC = () => {
               <Textarea name="histories" label="Historias" ref={register} />
             </Form>
           </FormGroup>
-          <Button type="submit" className="orange lg" form="form-add">
-            <Span>Salvar</Span>
-          </Button>
-          <BackButton />
+          <ActionContainer>
+            <Button type="submit" className="orange lg" form="form-add">
+              <Span>Salvar</Span>
+            </Button>
+          </ActionContainer>
         </>
       )}
 

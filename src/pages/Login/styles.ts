@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: 600px;
 `;
 
 export const Form = styled.form`

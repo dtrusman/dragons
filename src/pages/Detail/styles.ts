@@ -10,6 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
+  margin-top: 10px;
   @media (max-width: 600px) {
     width: 50%;
   }
@@ -34,4 +35,5 @@ export const Description = styled.p`
 
 export const Created = styled.span`
   font-size: 12px;
+  margin-bottom: 10px;
 `;

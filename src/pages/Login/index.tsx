@@ -20,7 +20,7 @@ export const Login: React.FC = () => {
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)} id="login">
         <TextField name="email" label="Email" ref={register} />
-        <TextField name="password" label="Senha" ref={register} />
+        <TextField type="password" name="password" label="Senha" ref={register} />
       </Form>
       <Button className="orange" form="login">
         Logar

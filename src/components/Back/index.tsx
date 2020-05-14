@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { BackContainer, Back } from './styles';
 
+import AppContext from 'App/context';
+
 export const BackButton: React.FC = () => {
   const { goBack } = useHistory();
 
-  return (
-    <BackContainer>
-      <Back onClick={() => goBack()}>Voltar</Back>
-    </BackContainer>
-  );
+  const { logged } = useContext(AppContext);
+
+  return <BackContainer>{logged && <Back onClick={() => goBack()}>Voltar</Back>}</BackContainer>;
 };

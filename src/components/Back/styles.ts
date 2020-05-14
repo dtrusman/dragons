@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const BackContainer = styled.div`
-  position: absolute;
   top: 0;
   left: 0;
   padding: 50px;
@@ -11,6 +10,8 @@ export const BackContainer = styled.div`
     justify-content: center;
     position: relative;
     width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
   }
 `;
 
@@ -23,10 +24,14 @@ export const Back = styled.a`
   border-radius: 5px;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   @media (max-width: 600px) {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 75%;
     background-color: #e9ce82;
     color: #000;
   }

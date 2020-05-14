@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: absolute;
   top: 0;
   right: 0;
   padding: 50px;
@@ -11,6 +10,8 @@ export const Container = styled.div`
     justify-content: center;
     position: relative;
     width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
   }
 `;
 
@@ -23,11 +24,15 @@ export const LogoutButton = styled.a`
   border-radius: 5px;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   @media (max-width: 600px) {
     display: flex;
     justify-content: center;
-    width: 50%;
-    background-color: #e9ce82;
-    color: #000;
+    width: 75%;
+    background-color: #b63b28;
+    color: #fff;
   }
 `;

@@ -74,4 +74,10 @@ export const Button = styled.button`
   &.lg {
     min-width: 300px;
   }
+
+  @media (max-width: 600px) {
+    margin-top: 10px;
+    min-width: 220px;
+    height: 56px;
+  }
 `;

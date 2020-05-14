@@ -1,6 +1,6 @@
 import React from 'react';
 import useModel from './useModel';
-import { Loader, BackButton } from 'components';
+import { Loader } from 'components';
 
 import { dateFormat } from 'utils';
 
@@ -19,7 +19,6 @@ export const Detail: React.FC = () => {
           <Name>{`${dragon?.name} - ${dragon?.type}`}</Name>
           <Description>{dragon?.histories}</Description>
           <Created>{`Criado em ${dragon?.createdAt && dateFormat(dragon?.createdAt)}`}</Created>
-          <BackButton />
         </>
       )}
     </Container>
