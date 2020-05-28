@@ -11,14 +11,28 @@ import AppContext from './context';
 
 import { Container, Header, Content } from './styles';
 
+declare global {
+  interface Window {
+    pushalertbyiw: any;
+  }
+}
+
 const App: React.FC = () => {
   const [logged, setLogged] = useState<boolean>(false);
+
+  const callbackFunction = (result: any) => {
+    console.log('Novo teste', result.success); // True or False
+    //Your Code
+  };
 
   useEffect(() => {
     const auth = async () => {
       const auth = await isAuthenticated();
       if (auth) {
+        (window.pushalertbyiw || []).push(['addToSegment', 8628, callbackFunction]); //You can get segment ID from dashboard or via REST API
         setLogged(true);
+      } else {
+        (window.pushalertbyiw || []).push(['addToSegment', 8629, callbackFunction]); //You can get segment ID from dashboard or via REST API
       }
     };
     auth();
