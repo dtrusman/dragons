@@ -30,6 +30,13 @@
         g.src = 'https://cdn.pushalert.co/integrate_ed217b51cf6bc2379cb0c5b2ac01f307.js';
         s.parentNode.insertBefore(g, s);
       })(document, 'script');
+
+      (pushalertbyiw = window.pushalertbyiw || []).push(['addToSegment', 8628, callbackFunction]); //You can get segment ID from dashboard or via REST API
+
+      function callbackFunction(result) {
+        console.log(result.success); // True or False
+        //Your Code
+      }
     </script>
     <!-- End PushAlert -->
   </head>
